@@ -1,0 +1,13 @@
+diff --git a/main.py b/main.py
+index a374f2b..e49cb09 100644
+--- a/main.py
++++ b/main.py
+@@ -6,6 +6,8 @@ import importlib.util
+ import folder_paths
+ import time
+ 
++os.putenv("HSA_OVERRIDE_GFX_VERSION", "10.3.0")
++
+ def execute_prestartup_script():
+     def execute_script(script_path):
+         module_name = os.path.splitext(script_path)[0]
