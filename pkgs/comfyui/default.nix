@@ -48,7 +48,6 @@ let
 
     patches = [
       ./paths-relative-to-cwd.patch
-      ./rocm-override-gfx-version.patch
     ];
 
     postPatch = ''
