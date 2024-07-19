@@ -37,6 +37,7 @@
             };
           };
         in rec {
+          iopaint = python.pkgs.callPackage ./pkgs/iopaint { };
           comfyui = final.callPackage ./pkgs/comfyui { };
           comfyui1 = comfyui.withCustomNodes (x: with x; [
             comfyui-tooling-nodes
@@ -55,7 +56,7 @@
       formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
       packages = forEachSystem ({ pkgs, pkgsRocm, pkgsCuda }: {
         inherit pkgsRocm pkgsCuda;
-        inherit (pkgs) comfyui;
+        inherit (pkgs) comfyui python3 python3Packages iopaint;
         default = pkgs.comfyui;
       });
     };

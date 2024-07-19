@@ -9,7 +9,6 @@
 , scikit-image
 , scipy
 , deepdiff
-, pytestCheckHook
 , pythonOlder
 , pythonRelaxDepsHook
 , torch
